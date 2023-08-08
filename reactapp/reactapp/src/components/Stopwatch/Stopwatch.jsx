@@ -1,5 +1,4 @@
 import React, { useState, useRef } from 'react';
-import './stopwatch.css';
 
 const Stopwatch = () => {
   const [time, setTime] = useState({ h: 0, m: 0, s: 0 });
@@ -61,20 +60,20 @@ const Stopwatch = () => {
     <div className="main-section">
       <div className="clock-holder">
         <div className="stopwatch">
-          <div className="stopwatch-time digits timer" data-testid="time">
+          <div className="stopwatch-time" data-testid="time">
             {time.h < 10 ? '0' + time.h : time.h}:
             {time.m < 10 ? '0' + time.m : time.m}:
             {time.s < 10 ? '0' + time.s : time.s}
           </div>
           <div className="stopwatch-controls">
             {status === 0 && (
-              <button className="stopwatch-btn stopwatch-btn-green btn-grp btn btn-one btn-start" onClick={start} data-testid="start">
+              <button className="stopwatch-btn stopwatch-btn-green" onClick={start} data-testid="start">
                 Start
               </button>
             )}
             {status === 1 && (
               <div>
-                <button className="stopwatch-btn stopwatch-btn-red btn-grp btn" onClick={pause} data-testid="pause">
+                <button className="stopwatch-btn stopwatch-btn-red" onClick={pause} data-testid="pause">
                   Pause
                 </button>
                 <button
@@ -88,7 +87,7 @@ const Stopwatch = () => {
               </div>
             )}
             <button
-              className="stopwatch-btn stopwatch-btn-blue btn"
+              className="stopwatch-btn stopwatch-btn-blue"
               onClick={reset}
               disabled={resetDisabled}
               data-testid="reset"
