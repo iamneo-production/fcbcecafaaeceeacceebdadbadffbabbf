@@ -68,13 +68,13 @@ const Stopwatch = () => {
           </div>
           <div className="stopwatch-controls">
             {status === 0 && (
-              <button className="stopwatch-btn stopwatch-btn-green" onClick={start} data-testid="start">
+              <button className="stopwatch-btn stopwatch-btn-green btn-grp btn btn-one btn-start" onClick={start} data-testid="start">
                 Start
               </button>
             )}
             {status === 1 && (
               <div>
-                <button className="stopwatch-btn stopwatch-btn-red" onClick={pause} data-testid="pause">
+                <button className="stopwatch-btn stopwatch-btn-red btn-grp btn" onClick={pause} data-testid="pause">
                   Pause
                 </button>
                 <button
@@ -88,7 +88,7 @@ const Stopwatch = () => {
               </div>
             )}
             <button
-              className="stopwatch-btn stopwatch-btn-blue"
+              className="stopwatch-btn stopwatch-btn-blue btn"
               onClick={reset}
               disabled={resetDisabled}
               data-testid="reset"
