@@ -61,7 +61,7 @@ const Stopwatch = () => {
     <div className="main-section">
       <div className="clock-holder">
         <div className="stopwatch">
-          <div className="stopwatch-time" data-testid="time">
+          <div className="stopwatch-time digits timer" data-testid="time">
             {time.h < 10 ? '0' + time.h : time.h}:
             {time.m < 10 ? '0' + time.m : time.m}:
             {time.s < 10 ? '0' + time.s : time.s}
