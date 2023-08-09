@@ -1,5 +1,3 @@
-stopwatch.jsx 
-
 import React, { useState, useRef } from 'react';
 
 const Stopwatch = () => {
